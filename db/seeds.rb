@@ -1,0 +1,36 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+BIBB_060 = Course.create(title: 'BIBB 060', description:'Intro to Biology', difficulty: 1.5)
+CHEM_053 = Course.create(title: 'CHEM 053', description:'Chemistry Lab I', difficulty: 2.6)
+CHEM_054 = Course.create(title: 'CHEM 054', description:'Chemistry Lab II', difficulty: 2.7)
+CHEM_101 = Course.create(title: 'CHEM 101', description:'Chemistry I', difficulty: 3.4)
+CHEM_102 = Course.create(title: 'CHEM 102', description:'Chemistry II', difficulty: 3.5)
+CIS_120 = Course.create(title: 'CIS 120', description:'Java II', difficulty: 3.11)
+CLST_100 = Course.create(title: 'CLST 100', description:'Roman Empire', difficulty: 2.2)
+ECON_001 = Course.create(title: 'ECON 001', description:'Microeconomics', difficulty: 2.73)
+ECON_002 = Course.create(title: 'ECON 002', description:'Macroeconomics', difficulty: 3)
+ENGR_250 = Course.create(title: 'ENGR 250', description:'Energy systems', difficulty: 2.2)
+HIST_027 = Course.create(title: 'HIST 027', description:'World War II', difficulty: 2.5)
+LALS_107 = Course.create(title: 'LALS 107', description:'Latin Language I', difficulty: 2.5)
+LATN_204 = Course.create(title: 'LATN 204', description:'Latin Language III', difficulty: 2.5)
+LGST_101 = Course.create(title: 'LGST 101', description:'Negotiations', difficulty: 2.6)
+MATH_104 = Course.create(title: 'MATH 104', description:'Calculus I', difficulty: 3.18)
+MATH_114 = Course.create(title: 'MATH 114', description:'Calculus II', difficulty: 3.35)
+OIDD_101 = Course.create(title: 'OIDD 101', description:'Understanding the Wharton psyche', difficulty: 2.5)
+PHYS_151 = Course.create(title: 'PHYS 151', description:'Electromagnetism', difficulty: 3.1)
+PSCI_151 = Course.create(title: 'PSCI 151', description:'Intro to IR', difficulty: 2.5)
+PSCI_180 = Course.create(title: 'PSCI 180', description:'Future of USA', difficulty: 2.57)
+PSYC_162 = Course.create(title: 'PSYC 162', description:'Science and philosophy', difficulty: 2.3)
+PSYC_170 = Course.create(title: 'PSYC 170', description:'Neuroscience', difficulty: 2.2)
+SPAN_130 = Course.create(title: 'SPAN 130', description:'Conversational Spanish', difficulty: 2.3)
+SPAN_140 = Course.create(title: 'SPAN 140', description:'Spanish II', difficulty: 2)
+STAT_111 = Course.create(title: 'STAT 111', description:'Intro to Statistics', difficulty: 2)
+WRIT_002 = Course.create(title: 'WRIT 002', description:'Writing Seminar', difficulty: 2.2)
+WRIT_030 = Course.create(title: 'WRIT 030', description:'Writing Seminar', difficulty: 2.95)
+WRIT_039 = Course.create(title: 'WRIT 039', description:'Writing Seminar', difficulty: 2.37)

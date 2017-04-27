@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Enrolled Students</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Name</th>
+      <th align="left">PennKey</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= link_to "#{student.first_name}"+" " + "#{student.last_name}", student %></td>
+        <td><%= link_to "#{student.pennkey}", student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) if student == current_student %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } if student == current_student %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

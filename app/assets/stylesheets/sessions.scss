@@ -1,0 +1,47 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #C6C6C6;
+$font-weight-bold: 10000;
+
+header1{
+  font-size: 150%;
+  color: #A9A9A9;
+}
+
+#boxed {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 220px;
+}
+
+#banner {
+padding: 0px;
+margins: 0px;
+    background-color: #0d3c87;
+}
+#error {
+    color: red;
+}
+
+.button{
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #7794C9;
+    border: 1px solid black;
+    border-top-color: #666;
+    border-left-color: #666;
+    }
+
+    #theForm {
+    margin-top: 2.6em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+#background {
+    background-color:#f0f0ea;
+}

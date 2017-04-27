@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @student.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @student.last_name %>
+</p>
+
+<p>
+  <strong>Pennkey:</strong>
+  <%= @student.pennkey %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <th>Course </th>
+  <th>Difficulty (out of 4.0) </th>
+    <% @student.courses.each do |course| %>
+      <tr>
+        <td><%= link_to "#{course.title}", course %></td>
+        <td align ="center"><%= course.difficulty %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<p>
+  <strong>Semester Difficulty:</strong>
+  <% sum = 0.0 %>
+  <% @student.courses.each do |course| %>
+  <% sum = course.difficulty.to_f + sum%>
+  <% end %>
+  <%= 0.0 if sum == 0.0 %>
+  <% if sum != 0.0 %>
+  <%= sum = sum / @student.courses.count %>
+  <% else 0.0 %>
+  <% end %>
+  <b> <%= "Are you even going to school?" if sum < 3%> </b>
+  <c> <%= "You're gonna have a tough semester" if sum >= 3%> </c>
+</p>
+
+
+<%= link_to 'Edit |', edit_student_path(@student) if @student == current_student %>
+<%= link_to 'Back', students_path %>

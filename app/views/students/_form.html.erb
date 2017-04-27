@@ -1,0 +1,35 @@
+<%= form_for(@student) do |f| %>
+<p> Sign up for an account with the University of Pennsylvania </p>
+  <div id="boxed", class="field">
+  <strong>
+    <%= f.label :first_name %>:
+    <%= f.text_field :first_name %> <br>
+    <br>
+    <%= f.label :last_name %>:
+    <%= f.text_field :last_name %> <br>
+    <br>
+    <%= f.label :PennKey %>:   
+  <%= f.text_field :pennkey %><br>
+  <br>
+  <%= f.label :password %>:
+  <%= f.password_field :password %><br/>
+  </strong>
+  </div>
+
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

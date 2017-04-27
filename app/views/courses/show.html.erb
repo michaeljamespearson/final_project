@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @course.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @course.difficulty %>
+</p>
+<br>
+<% if !@course.students.include?(current_student) %>
+<form action="/enroll" method="get">
+    <input type="hidden" name="course_id" value= <%= @course.id %> >
+    <input type="hidden" name="student_id" value=<%= current_student.id%>>
+    <input type="submit" value="Enroll">
+</form>
+<%end%>
+<br>
+<% if @course.students.include?(current_student) %>
+<form action="/drop" method="get">
+    <input type="hidden" name="course_id" value= <%= @course.id %> >
+    <input type="hidden" name="student_id" value=<%= current_student.id%>>
+    <input type="submit" value="Drop">
+</form>
+<%end%>
+<br>
+<%= link_to 'Back', courses_path %>

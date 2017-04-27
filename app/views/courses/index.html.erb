@@ -1,0 +1,31 @@
+<body>
+<p id="notice"><%= notice %></p>
+
+<h1>Available Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Difficulty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= link_to "#{course.title}", course %></td>
+        <td><%= link_to "#{course.description}", course %></td>
+        <td align ="center"><%= "#{course.difficulty}"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if @courses.blank? %>
+  <h4>There are no courses containing the term <%= params[:search] %>.</h4>
+<% end %>
+</body>

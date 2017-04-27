@@ -1,0 +1,41 @@
+<div id ="background">
+<div id="banner">
+<a href = "http://www.upenn.edu">
+<img src ="portal_penn-banner.gif" border ="0" width ="220" height="82">
+</a>
+</div>
+<br>
+<div id="theForm">
+<header1 id="log_in"> <strong> Penn WebLogin</strong></header1>
+<p> Log in to gain access to many <br>
+protected University web resources. </p>
+<div id="error">
+<%= flash[:error] %> <br>
+</div>
+<div id="boxed">
+<%= form_tag url: login_path do %>
+<strong>
+  <%= label_tag :pennkey %>
+  <%= text_field_tag :pennkey %>
+  </strong>
+  <br>
+  <br>
+  <strong>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <br>
+  </strong>
+  <br>
+  </div>
+  <br>
+  <div id = "button"> <%= submit_tag 'Log in', :class => "button" %></div>
+<% end %>
+</div>
+
+<br>
+<div id="theForm">
+<a href="http://www.upenn.edu/computing/weblogin/help.html">About Penn WebLogin
+</a>
+</div>
+<br>
+</div>

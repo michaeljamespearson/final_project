@@ -1,0 +1,25 @@
+<div id="navigation">
+<nav class="nav-banner">
+  <a class="nav-btn" href="/students">Students</a>
+  <a class="nav-btn" href="/courses">Courses</a>
+  <%if !(logged_in?)%>
+    <%= link_to 'Log in', '/login' %>
+    <%= link_to 'Sign up', '/students/new' %>
+  <%else%>
+    <%= link_to "#{current_student.first_name}", "/students/#{current_student.id}" %>
+    <%= link_to 'Log out', '/logout', method: :delete %>
+    <%end%>
+    <br>
+    <br>
+<%= form_tag(courses_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Courses" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+  <!-- Add link to user's show page and log out button if logged in -->
+  <!-- Add log out link otherwise -->
+  <span class="nav-sessions">
+  <br>
+  </span>
+  
+</nav>
+</div>

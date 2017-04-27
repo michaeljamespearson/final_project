@@ -1,0 +1,37 @@
+// Place all the styles related to the Courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$font-primary: 'Roboto', Arial, sans-serif;
+// Overrides
+$grid-gutter-width: 40px !default; 
+$border-radius-base:  4px !default;
+$padding-base-vertical: 14px !default;
+
+$brand-primary: #4CB648 !default;
+$brand-secondary: #DA1212 !default; 
+
+$brand-white: #fff;
+$brand-black: #000;
+$brand-lighter: #848484;
+$brand-darker: #212121;
+$brand-selection-color: $brand-primary;
+$brand-body-color: #fcfcfc;
+$brand-body-bg: #fff;
+$brand-dark: #222831;
+
+
+$input-border-focus: $brand-primary !default;
+$form-group-margin-bottom: 30px !default;
+
+body {
+    font-family: $font-primary;
+    line-height: 1.8;
+    font-size: 16px;
+    background: $brand-body-bg;
+    color: #848484;
+    font-weight: 300;
+    overflow-x: hidden;
+    &.fh5co-offcanvas {
+        overflow: hidden;
+    }
+}
